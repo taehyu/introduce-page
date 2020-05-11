@@ -1,0 +1,75 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?98005817');
+  src: url('./font/fontello.eot?98005817#iefix') format('embedded-opentype'),
+    url('./font/fontello.woff2?98005817') format('woff2'),
+    url('./font/fontello.woff?98005817') format('woff'),
+    url('./font/fontello.ttf?98005817') format('truetype'),
+    url('./font/fontello.svg?98005817#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.themeOrange{
+  color : orange;
+}
+.themeSkyblue{
+  color : skyblue;
+}
+.sprite{
+  background-image : url(./images/sprite_main.png);
+  background-repeat: no-repeat;
+  min-height: 60px;
+  padding-left: 20px;
+}
+.spriteBook{
+  background-position: 0 0;
+}
+
+/* 공통 인기사이트 */
+.soon__list{
+  list-style-type: none;
+  padding-left: 20px;
+}
+.soon__list li{
+  counter-increment: item;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.soon__list li::before{
+  content: counter(item);
+  background: orange;
+  border-radius: 100%;
+  color: white;
+  padding : 0.5em 0.75em;
+  white-space: nowrap;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.soon a{
+  margin-top: 8px;
+  flex-grow: 1;
+  position: relative;
+}
+.soon a:hover::before{
+  position: absolute;
+  content : attr(data-tooltip);
+  background-color: orange;
+  color : white;
+  top: 25px;
+  left: 20%;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border : 1px solid #aaa;
+  box-shadow: 3px 3px 0 0 black;
+  z-index: 100;
+}
+.soon{
+  order: 1;
+  width: 220px;
+}
+
